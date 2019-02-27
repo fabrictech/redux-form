@@ -1,6 +1,6 @@
 {
   "name": "@fabrictech/redux-form",
-  "version": "6.0.2-fabric-beta-1",
+  "version": "6.0.2-fabric-beta-2",
   "description": "A higher order component decorator for forms using Redux and React",
   "main": "./lib/index.js",
   "jsnext:main": "./es/index.js",
@@ -40,16 +40,16 @@
   },
   "homepage": "https://redux-form.com/",
   "dependencies": {
-    "array-findindex-polyfill": "^0.1.0",
-    "deep-equal": "^1.0.1",
-    "es6-error": "^3.0.0",
-    "hoist-non-react-statics": "^1.0.5",
-    "invariant": "^2.2.1",
-    "is-promise": "^2.1.0",
-    "lodash": "^4.12.0",
-    "lodash-es": "^4.12.0",
+    "array-findindex-polyfill": "0.1.0",
+    "deep-equal": "1.0.1",
+    "es6-error": "3.2.0",
+    "hoist-non-react-statics": "1.2.0",
+    "invariant": "2.2.2",
+    "is-promise": "2.1.0",
+    "lodash": "4.17.11",
+    "lodash-es": "4.17.4",
     "prop-types": "^15.7.2",
-    "shallowequal": "^0.2.2"
+    "shallowequal": "0.2.2"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
