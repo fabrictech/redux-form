@@ -1,8 +1,29 @@
+
+# @fabrictech/redux-form
+We have forked this dependency as part of our React 16 upgrade. Originally, we attempted to just upgrade to the latest 6.x minor (`6.8.0`, at time of writing), but this was unsuccesful. The minimum version that supports React 16 is `6.6.3`, but we weren't able to get to that either.
+
+The following breaking changes (made in patch versions) are preventing us from upgrading. Note that there could well be more - there are a lot of versions between `6.0.2` and `6.6.3`.
+
+### `6.1.0` -> `6.1.1`: Numeric Validation Broken
+The release notes say
+> Fixed bug that did not allow decimal points to be entered. #1946 There is a slight chance that this could break an implementation that was assuming data to be a Number. If you absolutely want your value to be stored as a Number, you will need to use the parse and format lifecycle hooks.
+
+This breaks inputs like the premium height input. We were able to work around it by modifying our `parse` hook, but rolling it out would require QAing all numeric inputs, as this could conflict with or otherwise brick our masking.
+
+### `6.2.0` -> `6.2.1`: Formgenie placeholder labels stop showing up.
+Didn't find an exact cause.
+
+## Changes in Fork
+* migrated from `React.propTypes` to `prop-types` (this was compared against the changes made to `redux-form` in `6.6.3`).
+* peer dependencies updated to allow React 16
+* dependencies pinned to the versions we had in Cashmere's `yarn.lock`.
+* added a `yarn.lock` (mostly by accident)
+
 # redux-form
 ---
 [<img src="http://npm.packagequality.com/badge/redux-form.png" align="right"/>](http://packagequality.com/#?package=redux-form)
 
-[![NPM Version](https://img.shields.io/npm/v/redux-form.svg?style=flat)](https://www.npmjs.com/package/redux-form) 
+[![NPM Version](https://img.shields.io/npm/v/redux-form.svg?style=flat)](https://www.npmjs.com/package/redux-form)
 [![NPM Downloads](https://img.shields.io/npm/dm/redux-form.svg?style=flat)](https://www.npmjs.com/package/redux-form)
 [![Build Status](https://img.shields.io/travis/erikras/redux-form/v6.svg?style=flat)](https://travis-ci.org/erikras/redux-form)
 [![codecov.io](https://codecov.io/gh/erikras/redux-form/branch/master/graph/badge.svg)](https://codecov.io/gh/erikras/redux-form)
