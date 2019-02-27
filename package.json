@@ -1,5 +1,5 @@
 {
-  "name": "redux-form",
+  "name": "@fabrictech/redux-form",
   "version": "6.0.2",
   "description": "A higher order component decorator for forms using Redux and React",
   "main": "./lib/index.js",
